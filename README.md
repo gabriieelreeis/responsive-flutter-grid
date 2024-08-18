@@ -104,4 +104,3 @@ Contributions are welcome! Please submit a pull request or open an issue for any
 This package is licensed under the MIT License. See [LICENSE](LICENSE) for more details.
 
 Inspired by responsive design principles from CSS frameworks like Bootstrap.
-```
