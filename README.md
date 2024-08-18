@@ -105,5 +105,3 @@ This package is licensed under the MIT License. See [LICENSE](LICENSE) for more 
 
 Inspired by responsive design principles from CSS frameworks like Bootstrap.
 ```
-
-Você pode copiar e colar este código diretamente no seu arquivo `README.md` no GitHub. Apenas certifique-se de substituir `yourusername` pela sua própria identificação de usuário no GitHub.
