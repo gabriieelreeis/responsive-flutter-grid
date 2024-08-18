@@ -1,39 +1,109 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+# Responsive Layout Flutter Package
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/tools/pub/writing-package-pages).
+This Flutter package provides responsive layout components inspired by CSS frameworks like Bootstrap. It includes widgets for creating responsive grid systems and layout containers that adapt to various screen sizes.
 
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/to/develop-packages).
--->
+## Widgets
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+### `RContent`
 
-## Features
+The `RContent` widget is a container that provides consistent padding, margin, and maximum width constraints for its child widget. It is similar to a "container" in CSS frameworks, centering content on the page and constraining it to a maximum width, with optional padding and margin.
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+**Parameters:**
+- `child`: The widget to be displayed inside the `RContent` container. This is required.
+- `padding`: Optional padding to be applied inside the container. If not provided, a default padding is applied.
+- `margin`: Optional margin to be applied outside the container. If not provided, a default margin is applied.
+- `fluid`: A boolean flag determining if the container should expand to full width (`true`) or be constrained to a maximum width (`false`). Default is `false`.
 
-## Getting started
-
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
-
-## Usage
-
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
+**Example:**
 
 ```dart
-const like = 'sample';
+RContent(
+  padding: EdgeInsets.all(16.0),
+  margin: EdgeInsets.symmetric(horizontal: 16.0),
+  fluid: true,
+  child: Text('Responsive Content'),
+)
 ```
 
-## Additional information
+### `RRow`
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+The `RRow` widget is a flexible container that arranges its child widgets in a horizontal layout, similar to a `Row`, but with the added capability to wrap items onto a new line when they exceed the available width.
+
+**Parameters:**
+- `children`: A list of widgets to be arranged horizontally within the row. This is required.
+- `mainAxisAlignment`: Optional parameter to control the alignment of children along the main axis (horizontal axis).
+- `crossAxisAlignment`: Optional parameter to control the alignment of children along the cross axis (vertical axis).
+- `spacing`: The horizontal space between child widgets. Default is `0.0`.
+- `runSpacing`: The vertical space between lines of child widgets. Default is `0.0`.
+
+**Example:**
+
+```dart
+RRow(
+  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+  crossAxisAlignment: CrossAxisAlignment.center,
+  spacing: 8.0,
+  runSpacing: 4.0,
+  children: [
+    Text('Item 1'),
+    Text('Item 2'),
+    Text('Item 3'),
+  ],
+)
+```
+
+### `RCol`
+
+The `RCol` widget is a responsive column that adjusts its width based on the screen size, similar to how columns work in CSS frameworks like Bootstrap.
+
+**Parameters:**
+- `xs`: Optional column span (out of 12) for extra small screens.
+- `sm`: Optional column span (out of 12) for small screens.
+- `md`: Optional column span (out of 12) for medium screens.
+- `lg`: Optional column span (out of 12) for large screens.
+- `xl`: Optional column span (out of 12) for extra large screens.
+- `child`: The widget to be displayed inside the column. This is required.
+
+**Example:**
+
+```dart
+RCol(
+  xs: 12,
+  sm: 6,
+  md: 4,
+  lg: 3,
+  xl: 2,
+  child: Container(
+    color: Colors.blue,
+    child: Text('Responsive Column'),
+  ),
+)
+```
+
+## Installation
+
+Add `responsive_layout` to your `pubspec.yaml` file:
+
+```yaml
+dependencies:
+  flutter:
+    sdk: flutter
+  responsive_layout:
+    git:
+      url: git://github.com/yourusername/responsive_layout.git
+```
+
+Then, run `flutter pub get` to install the package.
+
+## Contributing
+
+Contributions are welcome! Please submit a pull request or open an issue for any enhancements or bugs.
+
+## License
+
+This package is licensed under the MIT License. See [LICENSE](LICENSE) for more details.
+
+Inspired by responsive design principles from CSS frameworks like Bootstrap.
+```
+
+Você pode copiar e colar este código diretamente no seu arquivo `README.md` no GitHub. Apenas certifique-se de substituir `yourusername` pela sua própria identificação de usuário no GitHub.
