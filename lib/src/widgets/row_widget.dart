@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../consts/constants.dart';
+
 /// The `RRow` widget is a flexible container that arranges its child widgets
 /// in a horizontal layout, similar to a `Row`, but with the added capability
 /// to wrap items onto a new line when they exceed the available width.
@@ -37,8 +39,8 @@ class RRow extends StatelessWidget {
     required this.children,
     MainAxisAlignment? mainAxisAlignment,
     CrossAxisAlignment? crossAxisAlignment,
-    this.spacing = 0.0,
-    this.runSpacing = 0.0,
+    this.spacing = r_default_spacing,
+    this.runSpacing = r_default_spacing,
   })  : alignment = _getWrapAlignment(mainAxisAlignment),
         crossAlignment = _getWrapCrossAlignment(crossAxisAlignment);
 

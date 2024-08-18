@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_layout/src/consts/constants.dart';
+
+import '../consts/constants.dart';
 
 /// The `RContent` widget is a container that provides consistent padding,
 /// margin, and maximum width constraints for its child widget.
