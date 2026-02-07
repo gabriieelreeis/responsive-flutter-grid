@@ -90,7 +90,7 @@ dependencies:
     sdk: flutter
   responsive_layout:
     git:
-      url: git://github.com/yourusername/responsive_layout.git
+      url: git://github.com/gabriieelreeis/resposive-flutter-grid.git
 ```
 
 Then, run `flutter pub get` to install the package.
@@ -104,3 +104,4 @@ Contributions are welcome! Please submit a pull request or open an issue for any
 This package is licensed under the MIT License. See [LICENSE](LICENSE) for more details.
 
 Inspired by responsive design principles from CSS frameworks like Bootstrap.
+
